@@ -1,0 +1,2604 @@
+Listado de rutas de carpetas
+El n£mero de serie del volumen es 32B6-D813
+C:.
+|   .gitignore
+|   .nvmrc
+|   estructuraImportante.txt
+|   LICENSE
+|   pnpm-workspace.yaml
+|   README.md
+|   
++---.github
+|   |   CODEOWNERS
+|   |   
+|   +---ISSUE_TEMPLATE
+|   |       backend.yml
+|   |       config.yml
+|   |       frontend.yml
+|   |       fullstack.yml
+|   |       
+|   \---workflows
+|           auto-close-issues-epic.yml
+|           ci-backend.yml
+|           ci-frontend.yml
+|           pr-standards.yml
+|           sync-epics.yml
+|           
++---.husky
+|       pre-commit
+|       
++---backend
+|   |   .dockerignore
+|   |   .env.example
+|   |   .env.test.example
+|   |   .gitignore
+|   |   .oxlintrc.json
+|   |   .prettierrc
+|   |   compose.yml
+|   |   dockerfile
+|   |   eslint.config.mjs
+|   |   lint-staged.config.mjs
+|   |   nest-cli.json
+|   |   package.json
+|   |   pnpm-lock.yaml
+|   |   pnpm-workspace.yaml
+|   |   prisma7.config.ts
+|   |   README.md
+|   |   tsconfig.build.json
+|   |   tsconfig.json
+|   |   tsconfig.seed.json
+|   |   vitest.config.e2e.ts
+|   |   vitest.config.ts
+|   |   
+|   +---prisma
+|   |   |   schema.prisma
+|   |   |   
+|   |   \---migrations
+|   |       |   migration_lock.toml
+|   |       |   
+|   |       +---20260921042857_init
+|   |       |       migration.sql
+|   |       |       
+|   |       +---20260929070040_create_first_db
+|   |       |       migration.sql
+|   |       |       
+|   |       +---20260929072809_remove_enumerates_and_change_to_bytes
+|   |       |       migration.sql
+|   |       |       
+|   |       +---20261002214952_add_password_hash_to_users
+|   |       |       migration.sql
+|   |       |       
+|   |       +---20261003030332_rename_password_hash_to_password
+|   |       |       migration.sql
+|   |       |       
+|   |       +---20261003140000_add_availability_constraints
+|   |       |       migration.sql
+|   |       |       
+|   |       +---20261004132609_create_admin_export_histories
+|   |       |       migration.sql
+|   |       |       
+|   |       +---20261005130404_add_access_request_tables
+|   |       |       migration.sql
+|   |       |       
+|   |       +---20261006015523_add_partial_unique_indexes_submitted_requests
+|   |       |       migration.sql
+|   |       |       
+|   |       +---20261007012832_add_mentor_availability
+|   |       |       migration.sql
+|   |       |       
+|   |       \---20261007013321_initialize_mentor_availability
+|   |               migration.sql
+|   |               
+|   +---src
+|   |   |   app.controller.spec.ts
+|   |   |   app.controller.ts
+|   |   |   app.module.ts
+|   |   |   app.service.ts
+|   |   |   main.ts
+|   |   |   
+|   |   +---common
+|   |   |   +---constants
+|   |   |   |       auth.constants.ts
+|   |   |   |       date-time.constants.ts
+|   |   |   |       file-signatures.constants.ts
+|   |   |   |       roles.constants.ts
+|   |   |   |       seed.constants.ts
+|   |   |   |       session.constants.ts
+|   |   |   |       
+|   |   |   +---database
+|   |   |   |       seed-env.schema.ts
+|   |   |   |       seeds.spec.ts
+|   |   |   |       seeds.ts
+|   |   |   |       
+|   |   |   +---decorators
+|   |   |   |       current-user-id.decorator.ts
+|   |   |   |       current-user.decorator.ts
+|   |   |   |       roles.decorator.ts
+|   |   |   |       
+|   |   |   +---enums
+|   |   |   |       roles.enum.ts
+|   |   |   |       
+|   |   |   +---exceptions
+|   |   |   |       corrupted-file.exception.ts
+|   |   |   |       domain.exception.ts
+|   |   |   |       empty-file.exception.ts
+|   |   |   |       file-too-large.exception.ts
+|   |   |   |       forbidden-role.exception.ts
+|   |   |   |       invalid-file-type.exception.ts
+|   |   |   |       invalid-token.exception.ts
+|   |   |   |       missing-user.exception.ts
+|   |   |   |       request-validation.exception.ts
+|   |   |   |       unauthorized-session.exception.ts
+|   |   |   |       
+|   |   |   +---filters
+|   |   |   |       domain-exception.filter.ts
+|   |   |   |       index.ts
+|   |   |   |       
+|   |   |   +---guards
+|   |   |   |       jwt-auth.guard.ts
+|   |   |   |       jwt-auth.module.ts
+|   |   |   |       provisional.guard.ts
+|   |   |   |       roles.guard.ts
+|   |   |   |       
+|   |   |   +---interceptors
+|   |   |   |       index.ts
+|   |   |   |       response.interceptor.ts
+|   |   |   |       
+|   |   |   +---pipes
+|   |   |   |       index.ts
+|   |   |   |       request-validation.pipe.ts
+|   |   |   |       zod-validation.pipe.ts
+|   |   |   |       
+|   |   |   +---prisma
+|   |   |   |       build-connection-string.ts
+|   |   |   |       index.ts
+|   |   |   |       prisma.module.ts
+|   |   |   |       prisma.service.ts
+|   |   |   |       
+|   |   |   +---services
+|   |   |   |       file-validation.service.ts
+|   |   |   |       
+|   |   |   +---tests
+|   |   |   |       build-connection-string.spec.ts
+|   |   |   |       csv.spec.ts
+|   |   |   |       current-user-id.decorator.spec.ts
+|   |   |   |       current-user.decorator.spec.ts
+|   |   |   |       date-time.spec.ts
+|   |   |   |       domain-exception.filter.spec.ts
+|   |   |   |       escape-pg-wildcards.spec.ts
+|   |   |   |       file-exceptions.spec.ts
+|   |   |   |       file-name.spec.ts
+|   |   |   |       file-validation.service.spec.ts
+|   |   |   |       jwt-auth.guard.spec.ts
+|   |   |   |       jwt-auth.module.spec.ts
+|   |   |   |       map-record-not-found.spec.ts
+|   |   |   |       pagination.spec.ts
+|   |   |   |       prisma.service.spec.ts
+|   |   |   |       provisional.guard.spec.ts
+|   |   |   |       request-validation-utils.spec.ts
+|   |   |   |       request-validation.exception.spec.ts
+|   |   |   |       response.interceptor.spec.ts
+|   |   |   |       roles.guard.spec.ts
+|   |   |   |       seeds.spec.ts
+|   |   |   |       validate-env.spec.ts
+|   |   |   |       zod-validation.pipe.spec.ts
+|   |   |   |       
+|   |   |   +---types
+|   |   |   |       access-token-payload.type.ts
+|   |   |   |       already-formatted.types.ts
+|   |   |   |       api-response.types.ts
+|   |   |   |       authenticated-request.types.ts
+|   |   |   |       authenticated-user.types.ts
+|   |   |   |       bolivia-date-time.types.ts
+|   |   |   |       date-input.types.ts
+|   |   |   |       file-signature.type.ts
+|   |   |   |       file-storage.type.ts
+|   |   |   |       file-type.type.ts
+|   |   |   |       file-validation-rules.type.ts
+|   |   |   |       login-jwt-payload.types.ts
+|   |   |   |       multer-file.type.ts
+|   |   |   |       paginated-payload.types.ts
+|   |   |   |       seed-env.types.ts
+|   |   |   |       seed-summary.types.ts
+|   |   |   |       uploaded-file.type.ts
+|   |   |   |       validated-file.type.ts
+|   |   |   |       validation-error-detail.type.ts
+|   |   |   |       validation-error.types.ts
+|   |   |   |       validation-issue.type.ts
+|   |   |   |       week-range.types.ts
+|   |   |   |       
+|   |   |   \---utils
+|   |   |           build-request-validation-exception.ts
+|   |   |           csv.ts
+|   |   |           date-time.ts
+|   |   |           escape-pg-wildcards.ts
+|   |   |           file-name.ts
+|   |   |           map-record-not-found.ts
+|   |   |           pagination.ts
+|   |   |           to-api-body.ts
+|   |   |           validate-env.ts
+|   |   |           
+|   |   +---config
+|   |   |       swagger.config.ts
+|   |   |       
+|   |   +---modules
+|   |   |   +---access-requests
+|   |   |   |   |   access-requests.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       access-request-fields.constants.ts
+|   |   |   |   |       access-request-selects.constants.ts
+|   |   |   |   |       access-request-status-groups.constants.ts
+|   |   |   |   |       backoffice.constants.ts
+|   |   |   |   |       duplicate-labels.constants.ts
+|   |   |   |   |       list-access-requests.constants.ts
+|   |   |   |   |       otp.constants.ts
+|   |   |   |   |       reject-access-request.constants.ts
+|   |   |   |   |       request-code.constants.ts
+|   |   |   |   |       unique-indexes.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       access-requests.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---exceptions
+|   |   |   |   |       access-request-catalog-missing.exception.ts
+|   |   |   |   |       access-request-not-editable.exception.ts
+|   |   |   |   |       access-request-not-found.exception.ts
+|   |   |   |   |       active-access-request-exists.exception.ts
+|   |   |   |   |       document-required-to-submit.exception.ts
+|   |   |   |   |       duplicate-access-request-data.exception.ts
+|   |   |   |   |       index.ts
+|   |   |   |   |       invalid-document-type.exception.ts
+|   |   |   |   |       invalid-graduation-year.exception.ts
+|   |   |   |   |       missing-document-file.exception.ts
+|   |   |   |   |       request-code-generation.exception.ts
+|   |   |   |   |       request-document-not-found.exception.ts
+|   |   |   |   |       request-not-in-review.exception.ts
+|   |   |   |   |       
+|   |   |   |   +---helpers
+|   |   |   |   |       request-code.ts
+|   |   |   |   |       unique-violation.ts
+|   |   |   |   |       
+|   |   |   |   +---interceptors
+|   |   |   |   |       document-upload.interceptor.ts
+|   |   |   |   |       
+|   |   |   |   +---mail
+|   |   |   |   |       console-mail-sender.ts
+|   |   |   |   |       mail-sender.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       access-request-detail.mapper.ts
+|   |   |   |   |       access-request-list.mapper.ts
+|   |   |   |   |       access-request.mapper.ts
+|   |   |   |   |       request-status.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       access-requests.repository.ts
+|   |   |   |   |       activation-otp.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---requests
+|   |   |   |   |       access-request-fields.ts
+|   |   |   |   |       attach-document.schema.ts
+|   |   |   |   |       create-access-request.schema.ts
+|   |   |   |   |       list-access-requests.schema.ts
+|   |   |   |   |       reject-access-request.schema.ts
+|   |   |   |   |       request-status.schema.ts
+|   |   |   |   |       update-access-request.schema.ts
+|   |   |   |   |       
+|   |   |   |   +---seeds
+|   |   |   |   |       access-requests.seed.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       access-requests.service.ts
+|   |   |   |   |       activation-otp.service.ts
+|   |   |   |   |       rejection-notification.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       access-request.schema.spec.ts
+|   |   |   |   |       access-requests.approve.spec.ts
+|   |   |   |   |       access-requests.backoffice-guards.spec.ts
+|   |   |   |   |       access-requests.controller.spec.ts
+|   |   |   |   |       access-requests.detail.spec.ts
+|   |   |   |   |       access-requests.document.controller.spec.ts
+|   |   |   |   |       access-requests.document.repository.spec.ts
+|   |   |   |   |       access-requests.document.service.spec.ts
+|   |   |   |   |       access-requests.exceptions.spec.ts
+|   |   |   |   |       access-requests.list.spec.ts
+|   |   |   |   |       access-requests.mapper.spec.ts
+|   |   |   |   |       access-requests.module.spec.ts
+|   |   |   |   |       access-requests.reject.spec.ts
+|   |   |   |   |       access-requests.repository.spec.ts
+|   |   |   |   |       access-requests.seed.spec.ts
+|   |   |   |   |       access-requests.service.spec.ts
+|   |   |   |   |       access-requests.submit.controller.spec.ts
+|   |   |   |   |       access-requests.submit.repository.spec.ts
+|   |   |   |   |       access-requests.submit.service.spec.ts
+|   |   |   |   |       attach-document.schema.spec.ts
+|   |   |   |   |       career.enum.spec.ts
+|   |   |   |   |       document-upload.interceptor.spec.ts
+|   |   |   |   |       list-access-requests.schema.spec.ts
+|   |   |   |   |       request-code.helper.spec.ts
+|   |   |   |   |       request-status.schema.spec.ts
+|   |   |   |   |       unique-violation.helper.spec.ts
+|   |   |   |   |       
+|   |   |   |   \---types
+|   |   |   |           access-request.enum.ts
+|   |   |   |           access-requests-seed-result.types.ts
+|   |   |   |           career.enum.ts
+|   |   |   |           id-card-issued-in.enum.ts
+|   |   |   |           uploaded-file.types.ts
+|   |   |   |           
+|   |   |   +---auth
+|   |   |   |   |   auth.module.ts
+|   |   |   |   |   
+|   |   |   |   +---controllers
+|   |   |   |   |       auth.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---exceptions
+|   |   |   |   |       index.ts
+|   |   |   |   |       invalid-credentials.exception.ts
+|   |   |   |   |       role-not-assigned.exception.ts
+|   |   |   |   |       
+|   |   |   |   +---guards
+|   |   |   |   |       jwt-auth.guard.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       auth.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---requests
+|   |   |   |   |       login.schema.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       auth.service.ts
+|   |   |   |   |       
+|   |   |   |   \---tests
+|   |   |   |           auth.controller.spec.ts
+|   |   |   |           auth.exceptions.spec.ts
+|   |   |   |           auth.module.spec.ts
+|   |   |   |           auth.repository.spec.ts
+|   |   |   |           auth.service.spec.ts
+|   |   |   |           login.schema.spec.ts
+|   |   |   |           
+|   |   |   +---availability
+|   |   |   |   |   availability.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       appointment-status.constants.ts
+|   |   |   |   |       availability-docs.constants.ts
+|   |   |   |   |       block-id.constants.ts
+|   |   |   |   |       block-query.constants.ts
+|   |   |   |   |       create-block.constants.ts
+|   |   |   |   |       mentor-params.constants.ts
+|   |   |   |   |       seed-availability.constants.ts
+|   |   |   |   |       week-query.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       availability.controller.ts
+|   |   |   |   |       mentor-availability.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---enums
+|   |   |   |   |       appointment-status-title.enum.ts
+|   |   |   |   |       
+|   |   |   |   +---exceptions
+|   |   |   |   |       block-has-appointment.exception.ts
+|   |   |   |   |       block-not-found.exception.ts
+|   |   |   |   |       block-not-owned.exception.ts
+|   |   |   |   |       block-overlap.exception.ts
+|   |   |   |   |       index.ts
+|   |   |   |   |       invalid-block-time.exception.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       availability.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       availability.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---requests
+|   |   |   |   |       block-id.request.ts
+|   |   |   |   |       create-block.request.ts
+|   |   |   |   |       mentor-params.request.ts
+|   |   |   |   |       update-block.request.ts
+|   |   |   |   |       week-query.request.ts
+|   |   |   |   |       
+|   |   |   |   +---seeds
+|   |   |   |   |       availability.seed.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       availability.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       availability.controller.spec.ts
+|   |   |   |   |       availability.exceptions.spec.ts
+|   |   |   |   |       availability.mapper.spec.ts
+|   |   |   |   |       availability.module.spec.ts
+|   |   |   |   |       availability.repository.spec.ts
+|   |   |   |   |       availability.seed.spec.ts
+|   |   |   |   |       availability.service.spec.ts
+|   |   |   |   |       block-id.request.spec.ts
+|   |   |   |   |       create-block.request.spec.ts
+|   |   |   |   |       mentor-availability.controller.spec.ts
+|   |   |   |   |       mentor-params.request.spec.ts
+|   |   |   |   |       update-block.request.spec.ts
+|   |   |   |   |       week-query.request.spec.ts
+|   |   |   |   |       
+|   |   |   |   +---types
+|   |   |   |   |       availability-block-response.types.ts
+|   |   |   |   |       availability-block-state.types.ts
+|   |   |   |   |       availability-block-with-appointments.types.ts
+|   |   |   |   |       availability-seed-result.types.ts
+|   |   |   |   |       availability-seed-users.types.ts
+|   |   |   |   |       deleted-block-response.types.ts
+|   |   |   |   |       seed-block-plan.types.ts
+|   |   |   |   |       seed-block.types.ts
+|   |   |   |   |       seed-trio-position.types.ts
+|   |   |   |   |       seed-week-range.types.ts
+|   |   |   |   |       seed-weeks.types.ts
+|   |   |   |   |       update-block-data.types.ts
+|   |   |   |   |       
+|   |   |   |   \---utils
+|   |   |   |           overlap-error.ts
+|   |   |   |           
+|   |   |   +---certification-documents
+|   |   |   |   |   certification-documents.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       certification-document.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       certification-document-file.controller.ts
+|   |   |   |   |       certification-documents.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---exceptions
+|   |   |   |   |       certification-document-not-found.exception.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       certification-document.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       certification-documents.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       certification-documents.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       certification-document.mapper.spec.ts
+|   |   |   |   |       certification-documents.api.spec.ts
+|   |   |   |   |       certification-documents.controller.spec.ts
+|   |   |   |   |       certification-documents.module.spec.ts
+|   |   |   |   |       certification-documents.repository.spec.ts
+|   |   |   |   |       certification-documents.service.spec.ts
+|   |   |   |   |       
+|   |   |   |   \---types
+|   |   |   |           certification-document-download.type.ts
+|   |   |   |           
+|   |   |   +---certifications
+|   |   |   |   |   certifications.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       certification.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       certifications.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---exceptions
+|   |   |   |   |       certification-not-found.exception.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       certification.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       certifications.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---requests
+|   |   |   |   |       certification-fields.schema.ts
+|   |   |   |   |       create-certification.request.ts
+|   |   |   |   |       update-certification.request.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       certifications.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       certification-validation.spec.ts
+|   |   |   |   |       certification.mapper.spec.ts
+|   |   |   |   |       certifications.api.spec.ts
+|   |   |   |   |       certifications.controller.spec.ts
+|   |   |   |   |       certifications.repository.spec.ts
+|   |   |   |   |       certifications.service.spec.ts
+|   |   |   |   |       
+|   |   |   |   \---types
+|   |   |   |           certification-record.type.ts
+|   |   |   |           certification-response.type.ts
+|   |   |   |           
+|   |   |   +---cv
+|   |   |   |   |   cv.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       cv.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       cv-file.controller.ts
+|   |   |   |   |       cv.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---exceptions
+|   |   |   |   |       cv-not-found.exception.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       cv.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       cv-file.repository.ts
+|   |   |   |   |       cv-metadata.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---responses
+|   |   |   |   |       cv.response.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       cv.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       cv-file.controller.spec.ts
+|   |   |   |   |       cv-file.repository.spec.ts
+|   |   |   |   |       cv-metadata.repository.spec.ts
+|   |   |   |   |       cv.controller.spec.ts
+|   |   |   |   |       cv.exceptions.spec.ts
+|   |   |   |   |       cv.mapper.spec.ts
+|   |   |   |   |       cv.module.spec.ts
+|   |   |   |   |       cv.service.spec.ts
+|   |   |   |   |       
+|   |   |   |   \---types
+|   |   |   |           cv-file-download.type.ts
+|   |   |   |           cv-metadata-record.type.ts
+|   |   |   |           
+|   |   |   +---educations
+|   |   |   |   |   educations.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       education-conflict.constants.ts
+|   |   |   |   |       education-select.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       educations.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---exceptions
+|   |   |   |   |       education-not-found.exception.ts
+|   |   |   |   |       education-update-conflict.exception.ts
+|   |   |   |   |       invalid-education-date-range.exception.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       education.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       educations.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---requests
+|   |   |   |   |       create-education.request.ts
+|   |   |   |   |       education-fields.schema.ts
+|   |   |   |   |       update-education.request.ts
+|   |   |   |   |       
+|   |   |   |   +---responses
+|   |   |   |   |       education.response.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       educations.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       education-requests.spec.ts
+|   |   |   |   |       education.mapper.spec.ts
+|   |   |   |   |       educations-concurrency.e2e-spec.ts
+|   |   |   |   |       educations-flow.spec.ts
+|   |   |   |   |       educations.controller.spec.ts
+|   |   |   |   |       educations.repository.spec.ts
+|   |   |   |   |       educations.service.spec.ts
+|   |   |   |   |       
+|   |   |   |   \---types
+|   |   |   |           education-period-snapshot.type.ts
+|   |   |   |           education-record.type.ts
+|   |   |   |           
+|   |   |   +---event-categories
+|   |   |   |   |   event-categories.module.ts
+|   |   |   |   |   index.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       event-categories.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       event-categories.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       event-categories.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       event-categories.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---requests
+|   |   |   |   |       get-event-categories.request.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       event-categories.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       event-categories.controller.spec.ts
+|   |   |   |   |       event-categories.mapper.spec.ts
+|   |   |   |   |       event-categories.repository.spec.ts
+|   |   |   |   |       event-categories.service.spec.ts
+|   |   |   |   |       get-event-categories.request.spec.ts
+|   |   |   |   |       
+|   |   |   |   \---types
+|   |   |   |           event-categories-list-data-response.types.ts
+|   |   |   |           event-categories-list-response.types.ts
+|   |   |   |           event-categories.types.ts
+|   |   |   |           event-category-response.types.ts
+|   |   |   |           event-category-with-fields.types.ts
+|   |   |   |           find-event-categories-payload.types.ts
+|   |   |   |           find-event-categories-response.types.ts
+|   |   |   |           
+|   |   |   +---event-registrations
+|   |   |   |   |   event-registrations.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       event-registrations.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       event-registrations.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       event-registrations.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       event-registrations.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---seeds
+|   |   |   |   |       event-registrations.seed.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       event-registrations.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       event-registrations.controller.spec.ts
+|   |   |   |   |       event-registrations.mapper.spec.ts
+|   |   |   |   |       event-registrations.repository.spec.ts
+|   |   |   |   |       event-registrations.service.spec.ts
+|   |   |   |   |       my-passes-auth.spec.ts
+|   |   |   |   |       
+|   |   |   |   \---types
+|   |   |   |           event-registrations.types.ts
+|   |   |   |           registration-entity.types.ts
+|   |   |   |           
+|   |   |   +---events
+|   |   |   |   |   events.module.ts
+|   |   |   |   |   index.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       events.constants.ts
+|   |   |   |   |       seed-events.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       events.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---exceptions
+|   |   |   |   |       event-not-found.exception.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       event.mapper.ts
+|   |   |   |   |       events-list.mapper.ts
+|   |   |   |   |       events.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       events.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---requests
+|   |   |   |   |       get-event-id.request.ts
+|   |   |   |   |       get-events.request.ts
+|   |   |   |   |       
+|   |   |   |   +---seeds
+|   |   |   |   |       events.seed.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       events.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       events.mapper.spec.ts
+|   |   |   |   |       events.repository.spec.ts
+|   |   |   |   |       events.service.spec.ts
+|   |   |   |   |       get-events.request.spec.ts
+|   |   |   |   |       
+|   |   |   |   +---types
+|   |   |   |   |       event-detail-response.types.ts
+|   |   |   |   |       event-item-response.types.ts
+|   |   |   |   |       event-with-relations.types.ts
+|   |   |   |   |       events-list-data-response.types.ts
+|   |   |   |   |       events-list-response.types.ts
+|   |   |   |   |       events.types.ts
+|   |   |   |   |       find-events-payload.types.ts
+|   |   |   |   |       find-events-response.types.ts
+|   |   |   |   |       
+|   |   |   |   \---utils
+|   |   |   |           event-date-time.ts
+|   |   |   |           
+|   |   |   +---files
+|   |   |   |   |   files.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       file-name.constants.ts
+|   |   |   |   |       file-rules.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---exceptions
+|   |   |   |   |       empty-file.exception.ts
+|   |   |   |   |       file-not-found.exception.ts
+|   |   |   |   |       file-too-large.exception.ts
+|   |   |   |   |       index.ts
+|   |   |   |   |       invalid-file-type.exception.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       files.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       files.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       files.exceptions.spec.ts
+|   |   |   |   |       files.module.spec.ts
+|   |   |   |   |       files.repository.spec.ts
+|   |   |   |   |       files.service.spec.ts
+|   |   |   |   |       
+|   |   |   |   \---types
+|   |   |   |           file-rules.ts
+|   |   |   |           file.types.ts
+|   |   |   |           
+|   |   |   +---matching
+|   |   |   |   \---services
+|   |   |   |           nlp.service.ts
+|   |   |   |           
+|   |   |   +---mentors
+|   |   |   |   |   mentors.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       mentor.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       mentors.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---exceptions
+|   |   |   |   |       already-mentor.exception.ts
+|   |   |   |   |       index.ts
+|   |   |   |   |       invalid-orientation-types.exception.ts
+|   |   |   |   |       invalid-technical-areas.exception.ts
+|   |   |   |   |       mentor-not-found.exception.ts
+|   |   |   |   |       mentor-role-not-found.exception.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       mentor.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       mentors.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---requests
+|   |   |   |   |       activate-mentor.schema.ts
+|   |   |   |   |       update-mentor-orientation-types.schema.ts
+|   |   |   |   |       update-mentor-technical-areas.schema.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       mentors.service.ts
+|   |   |   |   |       
+|   |   |   |   \---tests
+|   |   |   |           activate-mentor.schema.spec.ts
+|   |   |   |           mentor.mapper.spec.ts
+|   |   |   |           mentors.controller.spec.ts
+|   |   |   |           mentors.repository.spec.ts
+|   |   |   |           mentors.service.spec.ts
+|   |   |   |           mentorship-response.spec.ts
+|   |   |   |           update-mentor-orientation-types.schema.spec.ts
+|   |   |   |           update-mentor-technical-areas.schema.spec.ts
+|   |   |   |           
+|   |   |   +---orientation-types
+|   |   |   |   |   orientation-types.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       seed-orientation-types.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       orientation-types.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       orientation-types.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       orientation-types.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---seeds
+|   |   |   |   |       orientation-types.seed.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       orientation-types.service.ts
+|   |   |   |   |       
+|   |   |   |   \---tests
+|   |   |   |           orientation-types.controller.spec.ts
+|   |   |   |           orientation-types.mapper.spec.ts
+|   |   |   |           orientation-types.module.spec.ts
+|   |   |   |           orientation-types.repository.spec.ts
+|   |   |   |           orientation-types.seed.spec.ts
+|   |   |   |           orientation-types.service.spec.ts
+|   |   |   |           
+|   |   |   +---profile
+|   |   |   |   |   profile.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       profile.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       profile-photo.controller.ts
+|   |   |   |   |       profile.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---exceptions
+|   |   |   |   |       city-not-found.exception.ts
+|   |   |   |   |       photo-not-found.exception.ts
+|   |   |   |   |       profile-not-found.exception.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       profile-photo.mapper.ts
+|   |   |   |   |       profile.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       city.repository.ts
+|   |   |   |   |       photo-file.repository.ts
+|   |   |   |   |       profile.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---requests
+|   |   |   |   |       profile-fields.schema.ts
+|   |   |   |   |       update-personal-info.request.ts
+|   |   |   |   |       update-presentation.request.ts
+|   |   |   |   |       
+|   |   |   |   +---responses
+|   |   |   |   |       profile-city.response.ts
+|   |   |   |   |       profile-photo.response.ts
+|   |   |   |   |       profile.response.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       profile-photo.service.ts
+|   |   |   |   |       profile.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       city.repository.spec.ts
+|   |   |   |   |       photo-file.repository.spec.ts
+|   |   |   |   |       profile-photo.controller.spec.ts
+|   |   |   |   |       profile-photo.service.spec.ts
+|   |   |   |   |       profile.controller.spec.ts
+|   |   |   |   |       profile.exceptions.spec.ts
+|   |   |   |   |       profile.mapper.spec.ts
+|   |   |   |   |       profile.module.spec.ts
+|   |   |   |   |       profile.repository.spec.ts
+|   |   |   |   |       profile.requests.spec.ts
+|   |   |   |   |       profile.service.spec.ts
+|   |   |   |   |       
+|   |   |   |   \---types
+|   |   |   |           photo-file-download.type.ts
+|   |   |   |           profile-city-record.type.ts
+|   |   |   |           profile-record.type.ts
+|   |   |   |           
+|   |   |   +---reports
+|   |   |   |   |   reports.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       reports-access.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       reports.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       generated-report.mapper.ts
+|   |   |   |   |       report-user-csv.mapper.ts
+|   |   |   |   |       report-user.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       generated-reports.repository.ts
+|   |   |   |   |       report-users.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---requests
+|   |   |   |   |       report-history.schema.ts
+|   |   |   |   |       report-users.schema.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       report-history.service.ts
+|   |   |   |   |       reports.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       academic-period.spec.ts
+|   |   |   |   |       registered-users-period-filter.spec.ts
+|   |   |   |   |       registered-users-user-type-filter.spec.ts
+|   |   |   |   |       report-history.service.spec.ts
+|   |   |   |   |       report-user-csv.mapper.spec.ts
+|   |   |   |   |       report-users.repository.spec.ts
+|   |   |   |   |       reports.controller.spec.ts
+|   |   |   |   |       reports.service.spec.ts
+|   |   |   |   |       
+|   |   |   |   +---types
+|   |   |   |   |       generated-report.types.ts
+|   |   |   |   |       report-user.types.ts
+|   |   |   |   |       
+|   |   |   |   \---utils
+|   |   |   |           academic-period.ts
+|   |   |   |           
+|   |   |   +---skills
+|   |   |   |   |   skills.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       skill.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       skill.controller.ts
+|   |   |   |   |       user-skill.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---exceptions
+|   |   |   |   |       duplicate-skill.exception.ts
+|   |   |   |   |       skill-not-found.exception.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       skill.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       skill.repository.ts
+|   |   |   |   |       user-skill.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---requests
+|   |   |   |   |       create-custom-skill.request.ts
+|   |   |   |   |       search-skills.request.ts
+|   |   |   |   |       update-user-skills.request.ts
+|   |   |   |   |       
+|   |   |   |   +---responses
+|   |   |   |   |       skill.response.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       skill.service.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       skill.controller.spec.ts
+|   |   |   |   |       skill.mapper.spec.ts
+|   |   |   |   |       skill.repository.spec.ts
+|   |   |   |   |       skill.requests.spec.ts
+|   |   |   |   |       skill.service.spec.ts
+|   |   |   |   |       skills.module.spec.ts
+|   |   |   |   |       user-skill.controller.spec.ts
+|   |   |   |   |       user-skill.repository.spec.ts
+|   |   |   |   |       
+|   |   |   |   \---types
+|   |   |   |           skill-record.type.ts
+|   |   |   |           user-skill-record.type.ts
+|   |   |   |           
+|   |   |   +---technical-areas
+|   |   |   |   |   technical-areas.module.ts
+|   |   |   |   |   
+|   |   |   |   +---constants
+|   |   |   |   |       seed-technical-areas.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---controllers
+|   |   |   |   |       technical-areas.controller.ts
+|   |   |   |   |       
+|   |   |   |   +---mappers
+|   |   |   |   |       technical-areas.mapper.ts
+|   |   |   |   |       
+|   |   |   |   +---repositories
+|   |   |   |   |       technical-areas.repository.ts
+|   |   |   |   |       
+|   |   |   |   +---seeds
+|   |   |   |   |       technical-areas.seed.ts
+|   |   |   |   |       
+|   |   |   |   +---services
+|   |   |   |   |       technical-areas.service.ts
+|   |   |   |   |       
+|   |   |   |   \---tests
+|   |   |   |           technical-areas.controller.spec.ts
+|   |   |   |           technical-areas.mapper.spec.ts
+|   |   |   |           technical-areas.repository.spec.ts
+|   |   |   |           technical-areas.seed.spec.ts
+|   |   |   |           technical-areas.service.spec.ts
+|   |   |   |           
+|   |   |   +---users
+|   |   |   |   +---constants
+|   |   |   |   |       seed-users.constants.ts
+|   |   |   |   |       
+|   |   |   |   +---seeds
+|   |   |   |   |       users.seed.spec.ts
+|   |   |   |   |       users.seed.ts
+|   |   |   |   |       
+|   |   |   |   +---tests
+|   |   |   |   |       users.seed.spec.ts
+|   |   |   |   |       
+|   |   |   |   \---types
+|   |   |   |           seed-user-definition.types.ts
+|   |   |   |           seed-user-key.types.ts
+|   |   |   |           seed-users.types.ts
+|   |   |   |           users-seed-result.types.ts
+|   |   |   |           
+|   |   |   \---work-experience
+|   |   |       |   work-experience.module.ts
+|   |   |       |   
+|   |   |       +---constants
+|   |   |       |       work-experience-conflict.constants.ts
+|   |   |       |       
+|   |   |       +---controllers
+|   |   |       |       work-experience.controller.ts
+|   |   |       |       
+|   |   |       +---exceptions
+|   |   |       |       invalid-work-experience-date-range.exception.ts
+|   |   |       |       work-experience-end-date-required.exception.ts
+|   |   |       |       work-experience-not-found.exception.ts
+|   |   |       |       work-experience-update-conflict.exception.ts
+|   |   |       |       
+|   |   |       +---mappers
+|   |   |       |       work-experience.mapper.ts
+|   |   |       |       
+|   |   |       +---repositories
+|   |   |       |       work-experience.repository.ts
+|   |   |       |       
+|   |   |       +---requests
+|   |   |       |       create-work-experience.request.ts
+|   |   |       |       update-work-experience.request.ts
+|   |   |       |       work-experience-fields.schema.ts
+|   |   |       |       
+|   |   |       +---responses
+|   |   |       |       work-experience.response.ts
+|   |   |       |       
+|   |   |       +---services
+|   |   |       |       work-experience.service.ts
+|   |   |       |       
+|   |   |       +---tests
+|   |   |       |       work-experience-requests.spec.ts
+|   |   |       |       work-experience.controller.spec.ts
+|   |   |       |       work-experience.flow.spec.ts
+|   |   |       |       work-experience.mapper.spec.ts
+|   |   |       |       work-experience.repository.spec.ts
+|   |   |       |       work-experience.service.spec.ts
+|   |   |       |       
+|   |   |       \---types
+|   |   |               work-experience-company.type.ts
+|   |   |               work-experience-period-snapshot.type.ts
+|   |   |               work-experience-record.type.ts
+|   |   |               work-experience-write-data.type.ts
+|   |   |               
+|   |   \---prisma
+|   |       |   browser.ts
+|   |       |   client.ts
+|   |       |   commonInputTypes.ts
+|   |       |   enums.ts
+|   |       |   models.ts
+|   |       |   
+|   |       +---internal
+|   |       |       class.ts
+|   |       |       prismaNamespace.ts
+|   |       |       prismaNamespaceBrowser.ts
+|   |       |       
+|   |       \---models
+|   |               AccessRequest.ts
+|   |               AccessRequestDocumentType.ts
+|   |               AccessRequestStatus.ts
+|   |               ActivationOtp.ts
+|   |               AdminExportHistory.ts
+|   |               Appointment.ts
+|   |               AppointmentHistory.ts
+|   |               AppointmentStatus.ts
+|   |               AvailabilityBlock.ts
+|   |               BlockedDate.ts
+|   |               Career.ts
+|   |               Certification.ts
+|   |               City.ts
+|   |               Company.ts
+|   |               Education.ts
+|   |               Event.ts
+|   |               EventAttendance.ts
+|   |               EventCategory.ts
+|   |               EventModality.ts
+|   |               EventOrigin.ts
+|   |               EventRegistration.ts
+|   |               EventStatus.ts
+|   |               File.ts
+|   |               MentorOrientationType.ts
+|   |               MentorTechnicalArea.ts
+|   |               OrientationType.ts
+|   |               ProposalStatus.ts
+|   |               RegistrationStatus.ts
+|   |               Role.ts
+|   |               Skill.ts
+|   |               TechnicalArea.ts
+|   |               TimeProposal.ts
+|   |               User.ts
+|   |               UserRole.ts
+|   |               UserSkill.ts
+|   |               WorkExperience.ts
+|   |               
+|   \---test
+|           app.e2e-spec.ts
+|           
++---frontend
+|   |   .env.example
+|   |   .gitignore
+|   |   components.json
+|   |   eslint.config.mjs
+|   |   lint-staged.config.mjs
+|   |   next.config.ts
+|   |   package.json
+|   |   pnpm-lock.yaml
+|   |   pnpm-workspace.yaml
+|   |   postcss.config.mjs
+|   |   README.md
+|   |   tsconfig.json
+|   |   vitest.config.mts
+|   |   vitest.setup.ts
+|   |   
+|   +---public
+|   |   |   carlos.jpg
+|   |   |   file.svg
+|   |   |   globe.svg
+|   |   |   manifest.json
+|   |   |   next.svg
+|   |   |   sw.js
+|   |   |   vercel.svg
+|   |   |   window.svg
+|   |   |   
+|   |   \---icons
+|   |           icon-192x192.png
+|   |           icon-512x512.png
+|   |           icon-maskable-512x512.png
+|   |           
+|   \---src
+|       +---app
+|       |   |   favicon.ico
+|       |   |   globals.css
+|       |   |   layout.tsx
+|       |   |   providers.test.tsx
+|       |   |   providers.tsx
+|       |   |   register-service-worker.tsx
+|       |   |   
+|       |   +---(app)
+|       |   |   |   layout.test.tsx
+|       |   |   |   layout.tsx
+|       |   |   |   
+|       |   |   +---affinity-radar
+|       |   |   |   \---review-queue
+|       |   |   |           page.test.tsx
+|       |   |   |           page.tsx
+|       |   |   |           
+|       |   |   +---events
+|       |   |   |   |   page.tsx
+|       |   |   |   |   
+|       |   |   |   \---my-passes
+|       |   |   |           page.tsx
+|       |   |   |           
+|       |   |   +---matching
+|       |   |   |       page.test.tsx
+|       |   |   |       page.tsx
+|       |   |   |       
+|       |   |   +---mentor
+|       |   |   |   \---availability
+|       |   |   |           page.tsx
+|       |   |   |           
+|       |   |   +---mentors
+|       |   |   |   +---participation
+|       |   |   |   |   |   page.tsx
+|       |   |   |   |   |   
+|       |   |   |   |   \---technical-areas
+|       |   |   |   |           page.tsx
+|       |   |   |   |           
+|       |   |   |   +---register
+|       |   |   |   |   \---technical-areas
+|       |   |   |   |           page.tsx
+|       |   |   |   |           
+|       |   |   |   \---[id]
+|       |   |   |       |   page.test.tsx
+|       |   |   |       |   page.tsx
+|       |   |   |       |   
+|       |   |   |       \---availability
+|       |   |   |               page.tsx
+|       |   |   |               
+|       |   |   +---mentorship
+|       |   |   |   |   page.test.tsx
+|       |   |   |   |   page.tsx
+|       |   |   |   |   
+|       |   |   |   +---mentors
+|       |   |   |   |       page.test.tsx
+|       |   |   |   |       page.tsx
+|       |   |   |   |       
+|       |   |   |   \---orientation
+|       |   |   |           page.tsx
+|       |   |   |           
+|       |   |   +---perfil
+|       |   |   |   \---radar
+|       |   |   |           page.test.tsx
+|       |   |   |           page.tsx
+|       |   |   |           
+|       |   |   \---profile
+|       |   |       |   page.tsx
+|       |   |       |   profile-pages.test.tsx
+|       |   |       |   
+|       |   |       +---documents
+|       |   |       |       page.tsx
+|       |   |       |       
+|       |   |       +---personal-info
+|       |   |       |       page.tsx
+|       |   |       |       
+|       |   |       +---presentation
+|       |   |       |       page.tsx
+|       |   |       |       
+|       |   |       \---trajectory
+|       |   |           +---certifications
+|       |   |           |       page.tsx
+|       |   |           |       
+|       |   |           +---education
+|       |   |           |       page.tsx
+|       |   |           |       
+|       |   |           +---experience
+|       |   |           |       page.tsx
+|       |   |           |       
+|       |   |           \---skills
+|       |   |                   page.tsx
+|       |   |                   
+|       |   +---(backoffice)
+|       |   |   \---backoffice
+|       |   |       |   layout.test.tsx
+|       |   |       |   layout.tsx
+|       |   |       |   page.tsx
+|       |   |       |   
+|       |   |       +---reports
+|       |   |       |   +---history
+|       |   |       |   |       page.tsx
+|       |   |       |   |       
+|       |   |       |   +---registered-users
+|       |   |       |   |       page.tsx
+|       |   |       |   |       
+|       |   |       |   \---rejected-users
+|       |   |       |           page.tsx
+|       |   |       |           
+|       |   |       \---solicitudes
+|       |   |           |   page.tsx
+|       |   |           |   
+|       |   |           \---[id]
+|       |   |                   page.tsx
+|       |   |                   
+|       |   +---(public)
+|       |   |   |   page.test.tsx
+|       |   |   |   page.tsx
+|       |   |   |   
+|       |   |   +---area-detail-interaction-preview
+|       |   |   |       page.test.tsx
+|       |   |   |       page.tsx
+|       |   |   |       
+|       |   |   +---area-detail-preview
+|       |   |   |       page.test.tsx
+|       |   |   |       page.tsx
+|       |   |   |       
+|       |   |   +---login
+|       |   |   |       page.tsx
+|       |   |   |       
+|       |   |   +---request-access
+|       |   |   |       page.test.tsx
+|       |   |   |       page.tsx
+|       |   |   |       
+|       |   |   \---sidebar-preview
+|       |   |           page.test.tsx
+|       |   |           page.tsx
+|       |   |           
+|       |   \---chat
+|       |           page.tsx
+|       |           
+|       +---components
+|       |   \---ui
+|       |       |   alert-dialog.test.tsx
+|       |       |   alert-dialog.tsx
+|       |       |   alert.tsx
+|       |       |   avatar.tsx
+|       |       |   badge.tsx
+|       |       |   breadcrumb.tsx
+|       |       |   button.test.tsx
+|       |       |   button.tsx
+|       |       |   calendar.tsx
+|       |       |   checkbox.tsx
+|       |       |   data-display.test.tsx
+|       |       |   dialog.tsx
+|       |       |   dropdown-menu.tsx
+|       |       |   field.tsx
+|       |       |   input.tsx
+|       |       |   label.test.tsx
+|       |       |   label.tsx
+|       |       |   native-select.tsx
+|       |       |   overlays.test.tsx
+|       |       |   pagination.tsx
+|       |       |   primitives.test.tsx
+|       |       |   progress.test.tsx
+|       |       |   progress.tsx
+|       |       |   radio-group.test.tsx
+|       |       |   radio-group.tsx
+|       |       |   select.test.tsx
+|       |       |   select.tsx
+|       |       |   separator.tsx
+|       |       |   sheet.test.tsx
+|       |       |   sheet.tsx
+|       |       |   sidebar.test.tsx
+|       |       |   sidebar.tsx
+|       |       |   skeleton.tsx
+|       |       |   sonner.tsx
+|       |       |   table.test.tsx
+|       |       |   table.tsx
+|       |       |   tabs.test.tsx
+|       |       |   tabs.tsx
+|       |       |   textarea.test.tsx
+|       |       |   textarea.tsx
+|       |       |   toggle-group.tsx
+|       |       |   toggle.tsx
+|       |       |   tooltip.tsx
+|       |       |   
+|       |       \---card
+|       |               card-action.tsx
+|       |               card-content.tsx
+|       |               card-description.tsx
+|       |               card-footer.tsx
+|       |               card-header.tsx
+|       |               card-title.tsx
+|       |               card.test.tsx
+|       |               card.tsx
+|       |               index.ts
+|       |               
+|       +---hooks
+|       |       use-mobile.ts
+|       |       
+|       +---lib
+|       |       utils.ts
+|       |       
+|       +---modules
+|       |   +---access-request
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |   +---document
+|       |   |   |   |       document-dropzone.test.tsx
+|       |   |   |   |       document-dropzone.tsx
+|       |   |   |   |       document-preview-card.test.tsx
+|       |   |   |   |       document-preview-card.tsx
+|       |   |   |   |       document-step-test-utils.tsx
+|       |   |   |   |       document-step.test.tsx
+|       |   |   |   |       document-step.tsx
+|       |   |   |   |       
+|       |   |   |   +---personal-data
+|       |   |   |   |       career-select.tsx
+|       |   |   |   |       clear-data-dialog.test.tsx
+|       |   |   |   |       clear-data-dialog.tsx
+|       |   |   |   |       field-error.test.tsx
+|       |   |   |   |       field-error.tsx
+|       |   |   |   |       id-card-field.tsx
+|       |   |   |   |       personal-data-field.test.tsx
+|       |   |   |   |       personal-data-field.tsx
+|       |   |   |   |       personal-data-form-actions.tsx
+|       |   |   |   |       personal-data-form.focus.test.tsx
+|       |   |   |   |       personal-data-form.submit.test.tsx
+|       |   |   |   |       personal-data-form.test.tsx
+|       |   |   |   |       personal-data-form.tsx
+|       |   |   |   |       personal-data-intro.tsx
+|       |   |   |   |       required-mark.test.tsx
+|       |   |   |   |       required-mark.tsx
+|       |   |   |   |       
+|       |   |   |   \---request-steps
+|       |   |   |           public-header.test.tsx
+|       |   |   |           public-header.tsx
+|       |   |   |           request-steps-sidebar.test.tsx
+|       |   |   |           request-steps-sidebar.tsx
+|       |   |   |           review-step.test.tsx
+|       |   |   |           review-step.tsx
+|       |   |   |           
+|       |   |   +---constants
+|       |   |   |       access-request-defaults.constants.ts
+|       |   |   |       careers.constants.test.ts
+|       |   |   |       careers.constants.ts
+|       |   |   |       document-types.constants.test.ts
+|       |   |   |       document-types.constants.ts
+|       |   |   |       id-card-issued-in.constants.test.ts
+|       |   |   |       id-card-issued-in.constants.ts
+|       |   |   |       
+|       |   |   +---contexts
+|       |   |   |       access-request-context.test.tsx
+|       |   |   |       access-request-context.tsx
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-personal-data-bind.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       access-request.service.test.ts
+|       |   |   |       access-request.service.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       access-request-context.types.ts
+|       |   |   |       access-request-provider-props.types.ts
+|       |   |   |       access-request-send-options.types.ts
+|       |   |   |       access-request.types.ts
+|       |   |   |       field-error-props.types.ts
+|       |   |   |       personal-data-field-props.types.ts
+|       |   |   |       request-steps-sidebar-props.types.ts
+|       |   |   |       review-step.types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       build-access-request-payload.test.ts
+|       |   |   |       build-access-request-payload.ts
+|       |   |   |       format-file-size.test.ts
+|       |   |   |       format-file-size.ts
+|       |   |   |       format-submission-date.test.ts
+|       |   |   |       format-submission-date.ts
+|       |   |   |       validate-document-file.test.ts
+|       |   |   |       validate-document-file.ts
+|       |   |   |       validate-personal-data.test.ts
+|       |   |   |       validate-personal-data.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           request-access-view.test.tsx
+|       |   |           request-access-view.tsx
+|       |   |           
+|       |   +---auth
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---constants
+|       |   |   |       login-redirect.constants.ts
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-login.test.tsx
+|       |   |   |       use-login.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       auth.service.test.ts
+|       |   |   |       auth.service.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       auth-types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       get-post-login-path.test.ts
+|       |   |   |       get-post-login-path.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           login-view.test.tsx
+|       |   |           login-view.tsx
+|       |   |           
+|       |   +---availability
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |   |   availability-loading.tsx
+|       |   |   |   |   block-form.test.tsx
+|       |   |   |   |   block-form.tsx
+|       |   |   |   |   delete-block-dialog.test.tsx
+|       |   |   |   |   delete-block-dialog.tsx
+|       |   |   |   |   edit-block-panel.test.tsx
+|       |   |   |   |   edit-block-panel.tsx
+|       |   |   |   |   
+|       |   |   |   +---block-selection
+|       |   |   |   |       block-selection-panel.test.tsx
+|       |   |   |   |       block-selection-panel.tsx
+|       |   |   |   |       block-selection.test.tsx
+|       |   |   |   |       block-selection.tsx
+|       |   |   |   |       
+|       |   |   |   \---week-grid
+|       |   |   |           week-day-list.test.tsx
+|       |   |   |           week-day-list.tsx
+|       |   |   |           week-grid.test.tsx
+|       |   |   |           week-grid.tsx
+|       |   |   |           
+|       |   |   +---constants
+|       |   |   |       availability-query-keys.constants.ts
+|       |   |   |       availability-toast.constants.ts
+|       |   |   |       availability.constants.ts
+|       |   |   |       block-selection.constants.ts
+|       |   |   |       delete-block.constants.ts
+|       |   |   |       mentor-free-blocks.constants.ts
+|       |   |   |       my-availability.constants.ts
+|       |   |   |       week-grid.constants.ts
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-block-selection.test.ts
+|       |   |   |       use-block-selection.ts
+|       |   |   |       use-create-availability-block.test.ts
+|       |   |   |       use-create-availability-block.ts
+|       |   |   |       use-delete-block.test.ts
+|       |   |   |       use-delete-block.ts
+|       |   |   |       use-mentor-free-blocks.test.ts
+|       |   |   |       use-mentor-free-blocks.ts
+|       |   |   |       use-my-blocks.test.ts
+|       |   |   |       use-my-blocks.ts
+|       |   |   |       use-update-availability-block.test.ts
+|       |   |   |       use-update-availability-block.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       availability.api.test.ts
+|       |   |   |       availability.api.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       availability-block-state.types.ts
+|       |   |   |       availability-block.types.ts
+|       |   |   |       availability-filters.types.ts
+|       |   |   |       block-form-errors.types.ts
+|       |   |   |       block-form-field.types.ts
+|       |   |   |       block-form-mode.types.ts
+|       |   |   |       block-form-props.types.ts
+|       |   |   |       block-selection-panel-props.types.ts
+|       |   |   |       block-selection-props.types.ts
+|       |   |   |       block-validation-errors.types.ts
+|       |   |   |       create-availability-block-input.types.ts
+|       |   |   |       delete-block-dialog-props.types.ts
+|       |   |   |       edit-block-panel-props.types.ts
+|       |   |   |       mentor-availability-view-props.types.ts
+|       |   |   |       mentor-free-blocks-view-props.types.ts
+|       |   |   |       update-block-variables.types.ts
+|       |   |   |       week-day-list-props.types.ts
+|       |   |   |       week-grid-props.types.ts
+|       |   |   |       week-grid-variant.types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       block-selection.utils.test.ts
+|       |   |   |       block-selection.utils.ts
+|       |   |   |       block-validation.test.ts
+|       |   |   |       block-validation.ts
+|       |   |   |       calendar-date.test.ts
+|       |   |   |       calendar-date.ts
+|       |   |   |       format-week-label.test.ts
+|       |   |   |       format-week-label.ts
+|       |   |   |       pad.ts
+|       |   |   |       week-grid.utils.test.ts
+|       |   |   |       week-grid.utils.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           mentor-availability-view.test.tsx
+|       |   |           mentor-availability-view.tsx
+|       |   |           mentor-free-blocks-view.test.tsx
+|       |   |           mentor-free-blocks-view.tsx
+|       |   |           
+|       |   +---certifications
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |       certification-card.test.tsx
+|       |   |   |       certification-card.tsx
+|       |   |   |       certification-delete-dialog.tsx
+|       |   |   |       certification-document-field.test.tsx
+|       |   |   |       certification-document-field.tsx
+|       |   |   |       certification-document-form.test.tsx
+|       |   |   |       certification-document-form.tsx
+|       |   |   |       certification-document-item.test.tsx
+|       |   |   |       certification-document-item.tsx
+|       |   |   |       certification-documents-panel.test.tsx
+|       |   |   |       certification-documents-panel.tsx
+|       |   |   |       certification-form.test.tsx
+|       |   |   |       certification-form.tsx
+|       |   |   |       
+|       |   |   +---config
+|       |   |   |       certification-api.config.ts
+|       |   |   |       certification-document.config.ts
+|       |   |   |       certification-feedback.config.ts
+|       |   |   |       certification-validation.config.ts
+|       |   |   |       
+|       |   |   +---constants
+|       |   |   |       certification-form.constants.ts
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-certification-document.test.ts
+|       |   |   |       use-certification-document.ts
+|       |   |   |       use-certification-mutations.test.ts
+|       |   |   |       use-certification-mutations.ts
+|       |   |   |       use-certifications.test.ts
+|       |   |   |       use-certifications.ts
+|       |   |   |       use-delete-certification.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       certifications.service.test.ts
+|       |   |   |       certifications.service.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       certification-card-props.types.ts
+|       |   |   |       certification-delete-dialog-props.types.ts
+|       |   |   |       certification-document-change.types.ts
+|       |   |   |       certification-document-field-props.types.ts
+|       |   |   |       certification-document-form-props.types.ts
+|       |   |   |       certification-document-item-props.types.ts
+|       |   |   |       certification-documents-panel-props.types.ts
+|       |   |   |       certification-errors.types.ts
+|       |   |   |       certification-form-props.types.ts
+|       |   |   |       certification-mutation-messages.types.ts
+|       |   |   |       certification-mutation-options.types.ts
+|       |   |   |       certification.types.ts
+|       |   |   |       certifications-result.types.ts
+|       |   |   |       create-certification-dto.types.ts
+|       |   |   |       update-certification-dto.types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       format-issue-date.ts
+|       |   |   |       get-file-format.test.ts
+|       |   |   |       get-file-format.ts
+|       |   |   |       sort-certifications.ts
+|       |   |   |       validate-certificate-file.test.ts
+|       |   |   |       validate-certificate-file.ts
+|       |   |   |       validate-certification.test.ts
+|       |   |   |       validate-certification.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           certifications-view.test.tsx
+|       |   |           certifications-view.tsx
+|       |   |           
+|       |   +---chat
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |       chat-room.tsx
+|       |   |   |       contact-search-modal.tsx
+|       |   |   |       conversation-item.tsx
+|       |   |   |       conversation-list.tsx
+|       |   |   |       conversation-skeleton.tsx
+|       |   |   |       empty-chat-state.tsx
+|       |   |   |       message-input-bar.tsx
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-contact-search.ts
+|       |   |   |       use-conversations.ts
+|       |   |   |       use-messages.ts
+|       |   |   |       
+|       |   |   +---mocks
+|       |   |   |       mock-conversations.ts
+|       |   |   |       mock-messages.ts
+|       |   |   |       mock-users.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       chat-api.ts
+|       |   |   |       message-storage.ts
+|       |   |   |       
+|       |   |   +---tests
+|       |   |   |       chat-api.test.ts
+|       |   |   |       chat-room-layout.test.tsx
+|       |   |   |       chat-room-pagination.test.tsx
+|       |   |   |       chat-view.test.tsx
+|       |   |   |       components.test.tsx
+|       |   |   |       contact-search-modal-hu2.test.tsx
+|       |   |   |       contact-search-modal.test.tsx
+|       |   |   |       date-formatter.test.ts
+|       |   |   |       message-input-validation.test.tsx
+|       |   |   |       message-storage.test.ts
+|       |   |   |       mock-messages.test.ts
+|       |   |   |       mock-users.test.ts
+|       |   |   |       unicode-counter.test.ts
+|       |   |   |       use-conversations.test.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       conversation.types.tsx
+|       |   |   |       user.types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       date-formatter.ts
+|       |   |   |       unicode-counter.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           chat-view.tsx
+|       |   |           
+|       |   +---documents
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |       cv-upload-card.test.tsx
+|       |   |   |       cv-upload-card.tsx
+|       |   |   |       saved-cv-card.test.tsx
+|       |   |   |       saved-cv-card.tsx
+|       |   |   |       
+|       |   |   +---constants
+|       |   |   |       cv-api.constants.ts
+|       |   |   |       cv-error-messages.constants.ts
+|       |   |   |       cv-upload.constants.ts
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-cv-document.test.ts
+|       |   |   |       use-cv-document.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       documents.service.test.ts
+|       |   |   |       documents.service.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       cv-response.types.ts
+|       |   |   |       cv-upload-card-props.types.ts
+|       |   |   |       saved-cv-card-props.types.ts
+|       |   |   |       saved-cv.types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       format-upload-date.test.ts
+|       |   |   |       format-upload-date.ts
+|       |   |   |       get-cv-error-message.test.ts
+|       |   |   |       get-cv-error-message.ts
+|       |   |   |       is-cv-file-rejection.test.ts
+|       |   |   |       is-cv-file-rejection.ts
+|       |   |   |       to-saved-cv.test.ts
+|       |   |   |       to-saved-cv.ts
+|       |   |   |       validate-cv-file.test.ts
+|       |   |   |       validate-cv-file.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           documents-cv-view.test.tsx
+|       |   |           documents-cv-view.tsx
+|       |   |           
+|       |   +---education
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |       education-delete-dialog.tsx
+|       |   |   |       education-form.test.tsx
+|       |   |   |       education-form.tsx
+|       |   |   |       education-list-card.tsx
+|       |   |   |       
+|       |   |   +---constants
+|       |   |   |       education-api.constants.ts
+|       |   |   |       education-feedback.constants.ts
+|       |   |   |       education-form-defaults.constants.ts
+|       |   |   |       education-http.constants.ts
+|       |   |   |       education-ui.constants.ts
+|       |   |   |       education-validation.constants.ts
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-delete-education.test.ts
+|       |   |   |       use-delete-education.ts
+|       |   |   |       use-educations.test.ts
+|       |   |   |       use-educations.ts
+|       |   |   |       use-save-education.test.ts
+|       |   |   |       use-save-education.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       educations.service.test.ts
+|       |   |   |       educations.service.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       education-delete-dialog-props.types.ts
+|       |   |   |       education-form-errors.types.ts
+|       |   |   |       education-form-props.types.ts
+|       |   |   |       education-form-values.types.ts
+|       |   |   |       education-item.types.ts
+|       |   |   |       education-list-card-props.types.ts
+|       |   |   |       education-payload.types.ts
+|       |   |   |       educations-result.types.ts
+|       |   |   |       save-education-arguments.types.ts
+|       |   |   |       update-education-payload.types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       education-mappers.test.ts
+|       |   |   |       format-education-period.test.ts
+|       |   |   |       format-education-period.ts
+|       |   |   |       to-education-form-values.ts
+|       |   |   |       to-education-payload.ts
+|       |   |   |       to-education-update-payload.test.ts
+|       |   |   |       to-education-update-payload.ts
+|       |   |   |       validate-education-form.test.ts
+|       |   |   |       validate-education-form.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           education-view.test.tsx
+|       |   |           education-view.tsx
+|       |   |           
+|       |   +---event-categories
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |       category-filter-chips.test.tsx
+|       |   |   |       category-filter-chips.tsx
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-event-categories.test.tsx
+|       |   |   |       use-event-categories.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       event-categories.service.test.ts
+|       |   |   |       event-categories.service.ts
+|       |   |   |       
+|       |   |   \---types
+|       |   |           categories-result.types.ts
+|       |   |           category-filter-chips-props.types.ts
+|       |   |           event-category-item.types.ts
+|       |   |           
+|       |   +---events
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |       detail-row.tsx
+|       |   |   |       event-card.test.tsx
+|       |   |   |       event-card.tsx
+|       |   |   |       event-detail-panel.test.tsx
+|       |   |   |       event-detail-panel.tsx
+|       |   |   |       event-detail-state.tsx
+|       |   |   |       events-app-shell.tsx
+|       |   |   |       events-search-input.test.tsx
+|       |   |   |       events-search-input.tsx
+|       |   |   |       my-passes-empty-state.tsx
+|       |   |   |       pass-card.tsx
+|       |   |   |       pass-detail.tsx
+|       |   |   |       request-feedback.tsx
+|       |   |   |       
+|       |   |   +---constants
+|       |   |   |       events-navigation.constants.ts
+|       |   |   |       events.constants.ts
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-event.test.tsx
+|       |   |   |       use-event.ts
+|       |   |   |       use-events-filters.test.tsx
+|       |   |   |       use-events-filters.ts
+|       |   |   |       use-events-with-filters.test.tsx
+|       |   |   |       use-events.test.tsx
+|       |   |   |       use-events.ts
+|       |   |   |       use-my-passes.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       events.service.test.ts
+|       |   |   |       events.service.ts
+|       |   |   |       registrations.service.test.ts
+|       |   |   |       registrations.service.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       detail-result.types.ts
+|       |   |   |       detail-row-props.types.ts
+|       |   |   |       event-capacity-status.types.ts
+|       |   |   |       event-card-props.types.ts
+|       |   |   |       event-detail-panel-props.types.ts
+|       |   |   |       event-detail-state-props.types.ts
+|       |   |   |       event-detail.types.ts
+|       |   |   |       event-filters.types.ts
+|       |   |   |       event-item.types.ts
+|       |   |   |       event.types.ts
+|       |   |   |       events-app-shell-props.types.ts
+|       |   |   |       events-list-response.types.ts
+|       |   |   |       events-search-input-props.types.ts
+|       |   |   |       get-events-params.types.ts
+|       |   |   |       pass-card-props.types.ts
+|       |   |   |       pass-detail-props.types.ts
+|       |   |   |       registration.types.test.ts
+|       |   |   |       registration.types.ts
+|       |   |   |       request-feedback-props.types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       event-card.ts
+|       |   |   |       event-response.ts
+|       |   |   |       has-valid-event-capacity.ts
+|       |   |   |       registration-format.ts
+|       |   |   |       registration-response.ts
+|       |   |   |       response-validation.test.ts
+|       |   |   |       response-validation.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           events-view.test.tsx
+|       |   |           events-view.tsx
+|       |   |           my-passes-view.test.tsx
+|       |   |           my-passes-view.tsx
+|       |   |           
+|       |   +---home
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |       skills-detected-list.tsx
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-home.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       home.service.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           home-view.tsx
+|       |   |           
+|       |   +---matching
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |       candidate-detail-panel.tsx
+|       |   |   |       candidate-list-item.tsx
+|       |   |   |       candidate-list.tsx
+|       |   |   |       confirm-discard-dialog.tsx
+|       |   |   |       gap-breakdown-list.tsx
+|       |   |   |       radar-chart.tsx
+|       |   |   |       vacancy-tabs.tsx
+|       |   |   |       
+|       |   |   +---data
+|       |   |   |       matching.data.ts
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-matching.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       matching.service.test.ts
+|       |   |   |       matching.service.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       matching-types.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           matching-view.tsx
+|       |   |           
+|       |   +---mentors
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |   |   technical-area-card.test.tsx
+|       |   |   |   |   technical-area-card.tsx
+|       |   |   |   |   
+|       |   |   |   \---participation
+|       |   |   |           participation-empty-state.tsx
+|       |   |   |           participation-loading.tsx
+|       |   |   |           participation-overview.tsx
+|       |   |   |           
+|       |   |   +---constants
+|       |   |   |       participation-breadcrumb.constants.ts
+|       |   |   |       technical-areas-breadcrumb.constants.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       technical-areas.service.test.ts
+|       |   |   |       technical-areas.service.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           participation-view.test.tsx
+|       |   |           participation-view.tsx
+|       |   |           technical-areas-view.test.tsx
+|       |   |           technical-areas-view.tsx
+|       |   |           
+|       |   +---mentorship
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |   +---mentor
+|       |   |   |   |       mentor-about.tsx
+|       |   |   |   |       mentor-card.test.tsx
+|       |   |   |   |       mentor-card.tsx
+|       |   |   |   |       mentor-career.tsx
+|       |   |   |   |       mentor-directory-grid.test.tsx
+|       |   |   |   |       mentor-directory-grid.tsx
+|       |   |   |   |       mentor-guidance-types.tsx
+|       |   |   |   |       mentor-profile-components.test.tsx
+|       |   |   |   |       mentor-profile-header.tsx
+|       |   |   |   |       mentor-profile-navigation.tsx
+|       |   |   |   |       mentor-query-feedback.tsx
+|       |   |   |   |       mentor-query-skeleton.tsx
+|       |   |   |   |       mentor-technical-areas.tsx
+|       |   |   |   |       
+|       |   |   |   +---orientation
+|       |   |   |   |       orientation-step.test.tsx
+|       |   |   |   |       orientation-step.tsx
+|       |   |   |   |       
+|       |   |   |   +---participation
+|       |   |   |   |       participation-step.tsx
+|       |   |   |   |       
+|       |   |   |   \---wizard
+|       |   |   |           confirmation-step.tsx
+|       |   |   |           mentorship-activated-summary.tsx
+|       |   |   |           mentorship-wizard-shell.tsx
+|       |   |   |           progress-stepper.test.tsx
+|       |   |   |           progress-stepper.tsx
+|       |   |   |           step-technical-areas.tsx
+|       |   |   |           technical-area-card.tsx
+|       |   |   |           
+|       |   |   +---constants
+|       |   |   |       mentor-profile-breadcrumb.constants.ts
+|       |   |   |       mentorship-steps.constants.ts
+|       |   |   |       mentorship-wizard.constants.ts
+|       |   |   |       orientation-config-breadcrumb.constants.ts
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-mentor-directory.ts
+|       |   |   |       use-mentor-profile.ts
+|       |   |   |       use-mentorship-catalogs.test.tsx
+|       |   |   |       use-mentorship-catalogs.ts
+|       |   |   |       use-mentorship-wizard.test.ts
+|       |   |   |       use-mentorship-wizard.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       mentor-activation.service.test.ts
+|       |   |   |       mentor-activation.service.ts
+|       |   |   |       mentor-directory.service.test.ts
+|       |   |   |       mentor-directory.service.ts
+|       |   |   |       mentor-profile.service.test.ts
+|       |   |   |       mentor-profile.service.ts
+|       |   |   |       mentorship-wizard-draft.service.test.ts
+|       |   |   |       mentorship-wizard-draft.service.ts
+|       |   |   |       orientation-type.service.test.ts
+|       |   |   |       orientation-type.service.ts
+|       |   |   |       technical-area.service.test.ts
+|       |   |   |       technical-area.service.ts
+|       |   |   |       
+|       |   |   +---testing
+|       |   |   |       mentor-profile.fixture.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       activate-mentor-payload.types.ts
+|       |   |   |       activate-mentor-response.types.ts
+|       |   |   |       mentor-directory.types.ts
+|       |   |   |       mentor-profile.types.ts
+|       |   |   |       mentorship-step-definition.types.ts
+|       |   |   |       mentorship-step.types.ts
+|       |   |   |       mentorship-wizard-state.types.ts
+|       |   |   |       orientation-type-response.types.ts
+|       |   |   |       technical-area-response.types.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           mentor-directory-view.test.tsx
+|       |   |           mentor-directory-view.tsx
+|       |   |           mentor-profile-view.test.tsx
+|       |   |           mentor-profile-view.tsx
+|       |   |           mentor-query-flow.test.tsx
+|       |   |           mentorship-view.test.tsx
+|       |   |           mentorship-view.tsx
+|       |   |           orientation-config-view.test.tsx
+|       |   |           orientation-config-view.tsx
+|       |   |           
+|       |   +---profile
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |       confirm-delete-dialog.test.tsx
+|       |   |   |       confirm-delete-dialog.tsx
+|       |   |   |       contact-info-card.tsx
+|       |   |   |       edit-section-link.tsx
+|       |   |   |       feedback-message.test.tsx
+|       |   |   |       feedback-message.tsx
+|       |   |   |       form-field.tsx
+|       |   |   |       personal-info-form.test.tsx
+|       |   |   |       personal-info-form.tsx
+|       |   |   |       presentation-form.test.tsx
+|       |   |   |       presentation-form.tsx
+|       |   |   |       presentation-summary-card.tsx
+|       |   |   |       profile-avatar.tsx
+|       |   |   |       profile-completion-banner.tsx
+|       |   |   |       profile-header.tsx
+|       |   |   |       profile-info-item.tsx
+|       |   |   |       profile-null-safety.test.tsx
+|       |   |   |       profile-page-layout.test.tsx
+|       |   |   |       profile-page-layout.tsx
+|       |   |   |       profile-photo-feedback.tsx
+|       |   |   |       profile-photo-field.test.tsx
+|       |   |   |       profile-photo-field.tsx
+|       |   |   |       profile-preview-card.tsx
+|       |   |   |       profile-tabs.test.tsx
+|       |   |   |       profile-tabs.tsx
+|       |   |   |       section-card.tsx
+|       |   |   |       trajectory-steps.test.tsx
+|       |   |   |       trajectory-steps.tsx
+|       |   |   |       writing-tips-card.tsx
+|       |   |   |       
+|       |   |   +---config
+|       |   |   |       auth-storage.config.ts
+|       |   |   |       file-upload.config.ts
+|       |   |   |       file-validation-messages.config.ts
+|       |   |   |       profile-form-defaults.config.ts
+|       |   |   |       profile-summary-defaults.config.ts
+|       |   |   |       profile-tabs.config.ts
+|       |   |   |       short-month-labels.config.ts
+|       |   |   |       trajectory-steps.config.ts
+|       |   |   |       
+|       |   |   +---constants
+|       |   |   |       file-size.constants.ts
+|       |   |   |       http-status.constants.ts
+|       |   |   |       photo-api.constants.ts
+|       |   |   |       photo-error-messages.constants.ts
+|       |   |   |       profile-api.constants.ts
+|       |   |   |       profile-feedback.constants.ts
+|       |   |   |       profile-fields.constants.ts
+|       |   |   |       profile-validation.constants.ts
+|       |   |   |       profile.constants.ts
+|       |   |   |       validation.constants.ts
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-cities.ts
+|       |   |   |       use-profile-photo.test.ts
+|       |   |   |       use-profile-photo.ts
+|       |   |   |       use-profile.ts
+|       |   |   |       use-save-profile.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       profile-photo.service.test.ts
+|       |   |   |       profile-photo.service.ts
+|       |   |   |       profile.service.test.ts
+|       |   |   |       profile.service.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       api-response.types.ts
+|       |   |   |       city-option.types.ts
+|       |   |   |       confirm-delete-dialog-props.types.ts
+|       |   |   |       contact-info-card-props.types.ts
+|       |   |   |       edit-section-link-props.types.ts
+|       |   |   |       feedback-message-props.types.ts
+|       |   |   |       feedback-type.types.ts
+|       |   |   |       feedback.types.ts
+|       |   |   |       field-error-props.types.ts
+|       |   |   |       form-field-props.types.ts
+|       |   |   |       http-error.types.ts
+|       |   |   |       personal-info-errors.types.ts
+|       |   |   |       personal-info-form-props.types.ts
+|       |   |   |       personal-info-values.types.ts
+|       |   |   |       presentation-errors.types.ts
+|       |   |   |       presentation-form-props.types.ts
+|       |   |   |       presentation-payload.types.ts
+|       |   |   |       presentation-summary-card-props.types.ts
+|       |   |   |       presentation-values.types.ts
+|       |   |   |       profile-avatar-props.types.ts
+|       |   |   |       profile-field-errors.types.ts
+|       |   |   |       profile-header-props.types.ts
+|       |   |   |       profile-info-item-props.types.ts
+|       |   |   |       profile-page-layout-props.types.ts
+|       |   |   |       profile-photo-feedback-props.types.ts
+|       |   |   |       profile-photo-field-props.types.ts
+|       |   |   |       profile-preview-card-props.types.ts
+|       |   |   |       profile-response.types.ts
+|       |   |   |       profile-summary.types.ts
+|       |   |   |       profile-tab-id.types.ts
+|       |   |   |       profile-tab.types.ts
+|       |   |   |       profile-tabs-props.types.ts
+|       |   |   |       section-card-props.types.ts
+|       |   |   |       trajectory-step-id.types.ts
+|       |   |   |       trajectory-step.types.ts
+|       |   |   |       trajectory-steps-props.types.ts
+|       |   |   |       uploaded-document-info.types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       format-file-size.test.ts
+|       |   |   |       format-file-size.ts
+|       |   |   |       get-auth-headers.test.ts
+|       |   |   |       get-auth-headers.ts
+|       |   |   |       get-field-error-props.ts
+|       |   |   |       get-full-name.ts
+|       |   |   |       get-http-status.ts
+|       |   |   |       get-initials.ts
+|       |   |   |       get-profile-error-message.ts
+|       |   |   |       get-profile-field-errors.test.ts
+|       |   |   |       get-profile-field-errors.ts
+|       |   |   |       is-profile-complete.test.ts
+|       |   |   |       is-profile-complete.ts
+|       |   |   |       is-valid-email.ts
+|       |   |   |       is-valid-phone.ts
+|       |   |   |       photo-utils.test.ts
+|       |   |   |       profile-mapping-utils.test.ts
+|       |   |   |       profile-utils.test.ts
+|       |   |   |       profile-validation.test.ts
+|       |   |   |       to-personal-info-values.ts
+|       |   |   |       to-presentation-values.ts
+|       |   |   |       to-profile-summary.ts
+|       |   |   |       trim-form-values.ts
+|       |   |   |       validate-file.ts
+|       |   |   |       validate-personal-info.ts
+|       |   |   |       validate-photo-file.ts
+|       |   |   |       validate-presentation.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           personal-info-view.tsx
+|       |   |           presentation-view.tsx
+|       |   |           profile-overview-view.test.tsx
+|       |   |           profile-overview-view.tsx
+|       |   |           profile-views.test.tsx
+|       |   |           
+|       |   +---radar-chart
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |       affinity-radar-axis-tick.tsx
+|       |   |   |       affinity-radar-chart.test.tsx
+|       |   |   |       affinity-radar-chart.tsx
+|       |   |   |       affinity-radar-dot.tsx
+|       |   |   |       area-breakdown-panel.test.tsx
+|       |   |   |       area-breakdown-panel.tsx
+|       |   |   |       area-certification-list.test.tsx
+|       |   |   |       area-certification-list.tsx
+|       |   |   |       area-course-list.test.tsx
+|       |   |   |       area-course-list.tsx
+|       |   |   |       area-detail-header.test.tsx
+|       |   |   |       area-detail-header.tsx
+|       |   |   |       area-detail-interaction.test.tsx
+|       |   |   |       area-detail-interaction.tsx
+|       |   |   |       area-detail-interaction.ui.test.tsx
+|       |   |   |       area-detail-panel.test.tsx
+|       |   |   |       area-detail-panel.tsx
+|       |   |   |       area-empty-state.test.tsx
+|       |   |   |       area-empty-state.tsx
+|       |   |   |       area-experience-timeline.test.tsx
+|       |   |   |       area-experience-timeline.tsx
+|       |   |   |       area-level-badge.test.tsx
+|       |   |   |       area-level-badge.tsx
+|       |   |   |       area-metrics.test.tsx
+|       |   |   |       area-metrics.tsx
+|       |   |   |       area-score-bar.test.tsx
+|       |   |   |       area-score-bar.tsx
+|       |   |   |       area-section.test.tsx
+|       |   |   |       area-section.tsx
+|       |   |   |       area-tags.test.tsx
+|       |   |   |       area-tags.tsx
+|       |   |   |       epic3-shell.test.tsx
+|       |   |   |       epic3-shell.tsx
+|       |   |   |       kpi-cards.test.tsx
+|       |   |   |       kpi-cards.tsx
+|       |   |   |       profile-header.test.tsx
+|       |   |   |       profile-header.tsx
+|       |   |   |       radar-card.tsx
+|       |   |   |       review-profile-detail.tsx
+|       |   |   |       review-profile-list.tsx
+|       |   |   |       review-queue-filters.tsx
+|       |   |   |       review-status-badge.tsx
+|       |   |   |       
+|       |   |   +---data
+|       |   |   |       area-details.data.test.ts
+|       |   |   |       area-details.data.ts
+|       |   |   |       radar-navigation.data.ts
+|       |   |   |       radar-profile.data.test.ts
+|       |   |   |       radar-profile.data.ts
+|       |   |   |       review-queue.data.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       area-detail-components.types.ts
+|       |   |   |       area-detail.types.ts
+|       |   |   |       epic3-shell.types.ts
+|       |   |   |       radar-profile-components.types.ts
+|       |   |   |       radar-profile.types.ts
+|       |   |   |       review-queue.types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       calculate-average.test.ts
+|       |   |   |       calculate-average.ts
+|       |   |   |       calculate-gap.test.ts
+|       |   |   |       calculate-gap.ts
+|       |   |   |       format-decimal.test.ts
+|       |   |   |       format-decimal.ts
+|       |   |   |       format-duration-years.test.ts
+|       |   |   |       format-duration-years.ts
+|       |   |   |       format-gap.test.ts
+|       |   |   |       format-gap.ts
+|       |   |   |       get-area-detail.test.ts
+|       |   |   |       get-area-detail.ts
+|       |   |   |       get-area-level.test.ts
+|       |   |   |       get-area-level.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           area-detail-interaction-preview-view.tsx
+|       |   |           area-detail-preview-view.tsx
+|       |   |           radar-profile-view.test.tsx
+|       |   |           radar-profile-view.tsx
+|       |   |           review-queue-view.tsx
+|       |   |           
+|       |   +---reports
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |       email-search-input.tsx
+|       |   |   |       export-csv-button.tsx
+|       |   |   |       export-success-toast.tsx
+|       |   |   |       management-menu.test.tsx
+|       |   |   |       management-menu.tsx
+|       |   |   |       refresh-button.test.tsx
+|       |   |   |       refresh-button.tsx
+|       |   |   |       registered-users-table.tsx
+|       |   |   |       rejected-users-table.tsx
+|       |   |   |       report-actions.tsx
+|       |   |   |       report-history-table.tsx
+|       |   |   |       table-pagination.test.tsx
+|       |   |   |       table-pagination.tsx
+|       |   |   |       table-state-rows.tsx
+|       |   |   |       user-type-filter.tsx
+|       |   |   |       
+|       |   |   +---constants
+|       |   |   |       academic-period.constants.ts
+|       |   |   |       generated-report.constants.ts
+|       |   |   |       registered-users.constants.ts
+|       |   |   |       report-table.constants.ts
+|       |   |   |       reports-navigation.constants.test.tsx
+|       |   |   |       reports-navigation.constants.ts
+|       |   |   |       reports.constants.ts
+|       |   |   |       table-pagination.constants.ts
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-export-registered-users-csv.ts
+|       |   |   |       use-export-rejected-users-csv.ts
+|       |   |   |       use-export-report-csv.test.ts
+|       |   |   |       use-export-report-csv.ts
+|       |   |   |       use-registered-users.ts
+|       |   |   |       use-rejected-users.ts
+|       |   |   |       use-report-history.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       reports.service.test.ts
+|       |   |   |       reports.service.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       email-search-input-props.types.ts
+|       |   |   |       export-csv-button-props.types.ts
+|       |   |   |       export-success-toast-props.types.ts
+|       |   |   |       generated-report.types.ts
+|       |   |   |       management-menu-props.types.ts
+|       |   |   |       pagination-item.types.ts
+|       |   |   |       refresh-button-props.types.ts
+|       |   |   |       registered-user.types.ts
+|       |   |   |       registered-users-table-props.types.ts
+|       |   |   |       rejected-user.types.ts
+|       |   |   |       rejected-users-table-props.types.ts
+|       |   |   |       report-actions-props.types.ts
+|       |   |   |       report-history-table-props.types.ts
+|       |   |   |       table-pagination-props.types.ts
+|       |   |   |       table-state-rows-props.types.ts
+|       |   |   |       user-type-filter-props.types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       academic-periods.test.ts
+|       |   |   |       academic-periods.ts
+|       |   |   |       pagination-items.test.ts
+|       |   |   |       pagination-items.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           registered-users-report-view.test.tsx
+|       |   |           registered-users-report-view.tsx
+|       |   |           rejected-users-report-view.test.tsx
+|       |   |           rejected-users-report-view.tsx
+|       |   |           report-history-view.test.tsx
+|       |   |           report-history-view.tsx
+|       |   |           
+|       |   +---request-review
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |   +---common
+|       |   |   |   |       status-badge.test.tsx
+|       |   |   |   |       status-badge.tsx
+|       |   |   |   |       
+|       |   |   |   +---detail
+|       |   |   |   |       approve-dialog.tsx
+|       |   |   |   |       data-contrast-panel.test.tsx
+|       |   |   |   |       data-contrast-panel.tsx
+|       |   |   |   |       document-viewer.test.tsx
+|       |   |   |   |       document-viewer.tsx
+|       |   |   |   |       history-card.test.tsx
+|       |   |   |   |       history-card.tsx
+|       |   |   |   |       verdict-panel.test.tsx
+|       |   |   |   |       verdict-panel.tsx
+|       |   |   |   |       
+|       |   |   |   +---inbox
+|       |   |   |   |       request-pagination.test.tsx
+|       |   |   |   |       request-pagination.tsx
+|       |   |   |   |       request-table.test.tsx
+|       |   |   |   |       request-table.tsx
+|       |   |   |   |       
+|       |   |   |   +---layout
+|       |   |   |   |       backoffice-brand.tsx
+|       |   |   |   |       backoffice-chrome.test.tsx
+|       |   |   |   |       backoffice-page-header.tsx
+|       |   |   |   |       backoffice-session-skeleton.tsx
+|       |   |   |   |       backoffice-shell.states.test.tsx
+|       |   |   |   |       backoffice-shell.test.tsx
+|       |   |   |   |       backoffice-shell.tsx
+|       |   |   |   |       backoffice-user-footer.tsx
+|       |   |   |   |       
+|       |   |   |   \---reject-dialog
+|       |   |   |           reject-dialog.test.tsx
+|       |   |   |           reject-dialog.tsx
+|       |   |   |           
+|       |   |   +---constants
+|       |   |   |       request-review.constants.ts
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-backoffice-session.ts
+|       |   |   |       use-document-url.ts
+|       |   |   |       use-request-detail.ts
+|       |   |   |       use-request-list.ts
+|       |   |   |       use-status-counts.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       request-review.service.test.ts
+|       |   |   |       request-review.service.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       approve-dialog-props.types.ts
+|       |   |   |       backoffice-session.types.ts
+|       |   |   |       backoffice-shell-props.types.ts
+|       |   |   |       backoffice-user-footer-props.types.ts
+|       |   |   |       contrast-field.types.ts
+|       |   |   |       data-contrast-panel-props.types.ts
+|       |   |   |       detail-header-props.types.ts
+|       |   |   |       document-viewer-props.types.ts
+|       |   |   |       history-card-props.types.ts
+|       |   |   |       reject-dialog-props.types.ts
+|       |   |   |       rejection-reason-result.types.ts
+|       |   |   |       request-detail-view-props.types.ts
+|       |   |   |       request-pagination-props.types.ts
+|       |   |   |       request-review.types.ts
+|       |   |   |       request-table-props.types.ts
+|       |   |   |       status-badge-props.types.ts
+|       |   |   |       status-counts.types.ts
+|       |   |   |       verdict-panel-props.types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       build-rejection-reason.test.ts
+|       |   |   |       build-rejection-reason.ts
+|       |   |   |       compare-values.test.ts
+|       |   |   |       compare-values.ts
+|       |   |   |       format-long-date.test.ts
+|       |   |   |       format-long-date.ts
+|       |   |   |       format-relative-time.test.ts
+|       |   |   |       format-relative-time.ts
+|       |   |   |       session.test.ts
+|       |   |   |       session.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           request-detail-view.test.tsx
+|       |   |           request-detail-view.tsx
+|       |   |           request-inbox-view.test.tsx
+|       |   |           request-inbox-view.tsx
+|       |   |           
+|       |   +---skills
+|       |   |   |   index.ts
+|       |   |   |   
+|       |   |   +---components
+|       |   |   |       skill-badge.test.tsx
+|       |   |   |       skill-badge.tsx
+|       |   |   |       skills-selector.test.tsx
+|       |   |   |       skills-selector.tsx
+|       |   |   |       
+|       |   |   +---config
+|       |   |   |       skills-api.config.ts
+|       |   |   |       skills-messages.config.ts
+|       |   |   |       
+|       |   |   +---constants
+|       |   |   |       skills.constants.ts
+|       |   |   |       
+|       |   |   +---hooks
+|       |   |   |       use-skills.test.ts
+|       |   |   |       use-skills.ts
+|       |   |   |       
+|       |   |   +---services
+|       |   |   |       skills.service.test.ts
+|       |   |   |       skills.service.ts
+|       |   |   |       
+|       |   |   +---types
+|       |   |   |       skill-badge-props.types.ts
+|       |   |   |       skill-item.types.ts
+|       |   |   |       skill-response.types.ts
+|       |   |   |       skills-selector-props.types.ts
+|       |   |   |       use-skills-result.types.ts
+|       |   |   |       
+|       |   |   +---utils
+|       |   |   |       get-skills-error-message.test.ts
+|       |   |   |       get-skills-error-message.ts
+|       |   |   |       to-skill-item.ts
+|       |   |   |       validate-custom-skill.test.ts
+|       |   |   |       validate-custom-skill.ts
+|       |   |   |       
+|       |   |   \---views
+|       |   |           skills-view.test.tsx
+|       |   |           skills-view.tsx
+|       |   |           
+|       |   \---work-experience
+|       |       |   index.ts
+|       |       |   
+|       |       +---components
+|       |       |       work-experience-form.test.tsx
+|       |       |       work-experience-form.tsx
+|       |       |       work-experience-list-card.tsx
+|       |       |       
+|       |       +---config
+|       |       |       work-experience-api.config.ts
+|       |       |       work-experience-feedback.config.ts
+|       |       |       work-experience-form-defaults.config.ts
+|       |       |       
+|       |       +---constants
+|       |       |       work-experience-validation.constants.ts
+|       |       |       work-experience.constants.ts
+|       |       |       
+|       |       +---hooks
+|       |       |       use-delete-work-experience.ts
+|       |       |       use-save-work-experience.ts
+|       |       |       use-work-experiences.test.ts
+|       |       |       use-work-experiences.ts
+|       |       |       
+|       |       +---services
+|       |       |       work-experience.service.test.ts
+|       |       |       work-experience.service.ts
+|       |       |       
+|       |       +---types
+|       |       |       work-experience-errors.types.ts
+|       |       |       work-experience-form-props.types.ts
+|       |       |       work-experience-form-values.types.ts
+|       |       |       work-experience-item.types.ts
+|       |       |       work-experience-list-card-props.types.ts
+|       |       |       work-experience-payload.types.ts
+|       |       |       work-experiences-result.types.ts
+|       |       |       
+|       |       +---utils
+|       |       |       format-work-period.ts
+|       |       |       sort-work-experiences.ts
+|       |       |       to-work-experience-form-values.ts
+|       |       |       to-work-experience-payload.ts
+|       |       |       validate-work-experience.test.ts
+|       |       |       validate-work-experience.ts
+|       |       |       work-experience-mappers.test.ts
+|       |       |       work-experience-utils.test.ts
+|       |       |       
+|       |       \---views
+|       |               work-experience-flow.test.tsx
+|       |               work-experience-view.test.tsx
+|       |               work-experience-view.tsx
+|       |               
+|       \---shared
+|           +---components
+|           |   +---layout
+|           |   |       app-shell.test.tsx
+|           |   |       app-shell.tsx
+|           |   |       app-sidebar.test.tsx
+|           |   |       app-sidebar.tsx
+|           |   |       breadcrumbs.tsx
+|           |   |       index.ts
+|           |   |       layout-components.test.tsx
+|           |   |       layout-fidelity-props.test.tsx
+|           |   |       page-breadcrumb.test.tsx
+|           |   |       page-breadcrumb.tsx
+|           |   |       sidebar-brand.tsx
+|           |   |       sidebar-nav-item.test.tsx
+|           |   |       sidebar-nav-item.tsx
+|           |   |       sidebar-toggle-button.tsx
+|           |   |       sidebar-user-card.test.tsx
+|           |   |       sidebar-user-card.tsx
+|           |   |       
+|           |   \---ui
+|           |           .gitkeep
+|           |           
+|           +---config
+|           |       env.config.test.ts
+|           |       env.config.ts
+|           |       navigation.config.ts
+|           |       
+|           +---constants
+|           |       date-time.constants.ts
+|           |       download-file.constants.ts
+|           |       sidebar-preview.constants.ts
+|           |       sidebar.constants.ts
+|           |       viewport.constants.ts
+|           |       
+|           +---contexts
+|           |       .gitkeep
+|           |       
+|           +---hooks
+|           |       use-debounced-value.test.ts
+|           |       use-debounced-value.ts
+|           |       
+|           +---services
+|           |   |   api-client.test.ts
+|           |   |   api-client.ts
+|           |   |   query-client.ts
+|           |   |   
+|           |   \---storage
+|           |           access-token-storage.test.ts
+|           |           access-token-storage.ts
+|           |           browser-session-storage.test.ts
+|           |           browser-session-storage.ts
+|           |           
+|           +---testing
+|           |       create-query-wrapper.tsx
+|           |       render-with-query.tsx
+|           |       stub-match-media.ts
+|           |       
+|           +---types
+|           |       api-error-body.types.ts
+|           |       api-response.types.ts
+|           |       app-shell-props.types.ts
+|           |       app-sidebar-props.types.ts
+|           |       bolivia-date-time.types.ts
+|           |       breadcrumb-entry.types.ts
+|           |       date-input.types.ts
+|           |       navigation-child-item.types.ts
+|           |       navigation-item.types.ts
+|           |       page-breadcrumb-props.types.ts
+|           |       save-file.types.ts
+|           |       sidebar-nav-item-props.types.ts
+|           |       sidebar-user-card-props.types.ts
+|           |       sidebar-user.types.ts
+|           |       week-range.types.ts
+|           |       
+|           \---utils
+|                   api-error-detail.test.ts
+|                   api-error-detail.ts
+|                   date-time.test.ts
+|                   date-time.ts
+|                   date.utils.test.ts
+|                   date.utils.ts
+|                   download-file.test.ts
+|                   download-file.ts
+|                   get-initials.test.ts
+|                   get-initials.ts
+|                   is-route-active.test.ts
+|                   is-route-active.ts
+|                   save-file.ts
+|                   
+\---scripts
+        check-branch-name.sh
+        
